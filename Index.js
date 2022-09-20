@@ -35,6 +35,5 @@ let dataname = document.getElementById('root')
     console.log(completedata)
     window.print(completedata)
     document.querySelector("apidata").innerHTML = completedata;
-    // console.log(completedata.height)
-    
+        
 });
