@@ -32,8 +32,7 @@ fetch('https://swapi.dev/api/people').then((data)=>{
 let dataname = document.getElementById('root')
     return data.json();
 }).then((completedata)=>{
-    console.log(completedata)
-    window.print(completedata)
-    document.querySelector("apidata").innerHTML = completedata;
+    console.log(completedata.results)    
+    document.querySelector("#apidata").innerHTML = completedata;
         
 });
