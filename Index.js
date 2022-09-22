@@ -26,13 +26,23 @@ document.getElementById("increaseBtn").onclick = function(){
     document.getElementById("countLabel").innerHTML = count;
 }
 
+
+
+
+
+
 // Fetch API and display in webpage
 fetch('https://swapi.dev/api/people').then((data)=>{
     
 let dataname = document.getElementById('root')
     return data.json();
 }).then((completedata)=>{
-    console.log(completedata.results)    
-    document.querySelector("#apidata").innerHTML = completedata;
+    console.log(completedata.results)   ;
+    var apiprint = document.querySelector("#apidata"); 
+    for (var i=0;i<10;i++)
+    {
+        apiprint.innerHTML=apiprint.innerHTML + completedata.results[i].name+"</br>";
+
+    }
         
 });
